@@ -1,0 +1,207 @@
+/* assets/css/style.css */
+
+body {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 40px;
+}
+
+.pokemon-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    background-color: #f8f9fa;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: none;
+}
+
+#pokemonDisplay {
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+}
+
+.type-normal { background-color: #A8A878 !important; }
+.type-fire { background-color: #F08030 !important; }
+.type-water { background-color: #6890F0 !important; }
+.type-electric { background-color: #F8D030 !important; }
+.type-grass { background-color: #78C850 !important; }
+.type-ice { background-color: #98D8D8 !important; }
+.type-fighting { background-color: #C03028 !important; }
+.type-poison { background-color: #A040A0 !important; }
+.type-ground { background-color: #E0C068 !important; }
+.type-flying { background-color: #A890F0 !important; }
+.type-psychic { background-color: #F85888 !important; }
+.type-bug { background-color: #A8B820 !important; }
+.type-rock { background-color: #B8A038 !important; }
+.type-ghost { background-color: #705898 !important; }
+.type-dragon { background-color: #7038F8 !important; }
+.type-dark { background-color: #705848 !important; }
+.type-steel { background-color: #B8B8D0 !important; }
+.type-fairy { background-color: #EE99AC !important; }
+
+h1 {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: bold;
+}
+
+#searchInput {
+    border-radius: 30px 0 0 30px;
+}
+
+#searchBtn {
+    border-radius: 0 30px 30px 0;
+}
+
+/* Pokedex styling */
+.pokedex-container {
+    background: #d2d2d2;
+    border: 8px solid #a0a0a0;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    position: relative;
+    background: linear-gradient(to bottom, #d2d2d2, #c0c0c0);
+}
+
+.pokedex-container::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 20px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 10px 10px 0 0;
+}
+
+.screen {
+    background: #8a9fa8;
+    border: 4px inset #6a7a8a;
+    border-radius: 10px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #8a9fa8 0%, #a0c0d0 100%);
+}
+
+.screen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0,0,0,0.05) 0px,
+        rgba(0,0,0,0.05) 1px,
+        transparent 1px,
+        transparent 4px
+    );
+    pointer-events: none;
+}
+
+#pokemonSprite {
+    max-height: 200px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #e74c3c;
+    box-shadow: 0 4px 0 #c0392b;
+    cursor: pointer;
+}
+
+.button.blue {
+    background: #3498db;
+    box-shadow: 0 4px 0 #2980b9;
+}
+
+.button.yellow {
+    background: #f1c40f;
+    box-shadow: 0 4px 0 #f39c12;
+}
+
+.pokeball-deco {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #2c3e50;
+    border-radius: 50%;
+    right: 20px;
+    top: 20px;
+    background: #ecf0f1;
+}
+
+.pokeball-deco::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #2c3e50;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pokeball-deco::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #ecf0f1;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Stats styling */
+.stats-row {
+    background: #f1f3f5;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.stat-bar {
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 5px 0;
+}
+
+.stat-bar-fill {
+    height: 100%;
+    background: #2575fc;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
